@@ -13,12 +13,13 @@ class HomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        var defaults: NSUserDefaults = NSUserDefaults(suiteName: "scrollforsushi")!
         
         welcomeLabel.text = defaults.objectForKey("firstName") as? String
         
-        var results = defaults.objectForKey("order") as Array<Int>
-        theResults.text = "\(results)"
+//        var results = defaults.objectForKey("order") as Array<Int>
+//        
+//        theResults.text = "\(results)"
     }
     
     override func didReceiveMemoryWarning() {

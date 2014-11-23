@@ -26,28 +26,11 @@ class ViewController: UIViewController {
     @IBAction func loginPressed(sender: AnyObject) {
         user.name = nameField.text
         user.password = passwordField.text
-        println("hi")
-        
-     
-        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        
+        var defaults: NSUserDefaults = NSUserDefaults(suiteName: "scrollforsushi")!
+    
         defaults.setObject(user.name, forKey: "firstName")
         defaults.synchronize()
-        
-        
-//        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//            
-//            if segue.identifier == "toHomeSegue" {
-//                let vc = segue.destinationViewController as HomeViewController
-//                vc.theUser = user
-//                println("vs \(vc)")
-//            }
-//            
-//        }
     }
-   
-    
-    
 }
 
 
