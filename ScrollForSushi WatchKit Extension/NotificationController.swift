@@ -1,9 +1,9 @@
 //
 //  NotificationController.swift
-//  ScrollForSushi WatchKit Extension
+//  Delivery WatchKit Extension
 //
-//  Created by Caroline Wong on 11/22/14.
-//  Copyright (c) 2014 madebycaro. All rights reserved.
+//  Created by Alexander Zai on 11/22/14.
+//  Copyright (c) 2014 Alexander Zai. All rights reserved.
 //
 
 import WatchKit
