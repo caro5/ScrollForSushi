@@ -13,26 +13,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-
-//https://api.delivery.com/merchant/search/delivery?client_id=YjYyNTM1NDAxMmU2M2YzNzYyY2UwOWU2NGM2ZDdkNzZk&address=199%20Water%20St%2010038
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        doQuery()
+
+        // Override point for customization after application launch.
+        return true
+    }
+
+    func doQuery() {
         let clientId = "ODc2OTBhN2JkYzYzZmYzNzQyZDEwNmU3ZTY5YzdmNDIz"
         let addr = "940%20Market%20St%2094102"
-      
-        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=\(addr)&merchants=r"
         
+        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=\(addr)&merchants=r"
         
         var url: NSURL = NSURL(string: url2)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
-        var response: AutoreleasingUnsafeMutablePointer <NSURLResponse?
-        >=nil
-        
+        var response: AutoreleasingUnsafeMutablePointer <NSURLResponse?>=nil
         var error: AutoreleasingUnsafeMutablePointer <NSErrorPointer?>=nil
         var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: response, error:nil)!
         var err: NSError
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        println("Synchronous\(jsonResult)")
+        
+        var restId: [AnyObject] = []
+        //println("Synchronous\(jsonResult)")
         println("Data items count: \(jsonResult.count)")
         var info : NSArray =  jsonResult.valueForKey("merchants") as NSArray
         println("Data items count: \(info.count)")
@@ -41,21 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (item["summary"] != nil) {
                     if let summ: AnyObject! = item["summary"] as AnyObject! {
                         if let cuis: AnyObject! = summ["cuisines"] as AnyObject! {
-                            println(cuis[0])
+                            // println(cuis[0])
                             if (cuis[0] != nil && cuis[0] as NSString == "Japanese") {
-                                println("trueee")
+                                restId.append(item["id"] as AnyObject!)
                             }
                         }
                     }
                 }
             }
         }
+        print(restId.count)
         
-
-        // Override point for customization after application launch.
-        return true
     }
-
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
