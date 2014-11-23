@@ -6,22 +6,34 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5F93AA0F-9870-4A9C-A265-C235266A7D70</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScrollForSushi</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
 		<string>https://github.com/caro5/OAuth2.git</string>
+		<key>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</key>
+		<string>https://github.com/caro5/OAuthSwift.git</string>
+		<key>EDA62BEF657F0C289AEFE3A794591BCBE21B6679</key>
+		<string>https://github.com/caro5/ScrollForSushi.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScrollForSushi.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2045D86BC5D391C299DCC498309E722E037BFF4E</key>
-		<string>OAuth2/</string>
+		<string>../..OAuth2/</string>
+		<key>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</key>
+		<string>../..OAuthSwift/</string>
+		<key>EDA62BEF657F0C289AEFE3A794591BCBE21B6679</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/caro5/OAuth2.git</string>
+	<string>https://github.com/caro5/ScrollForSushi.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2045D86BC5D391C299DCC498309E722E037BFF4E</string>
+	<string>EDA62BEF657F0C289AEFE3A794591BCBE21B6679</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -31,6 +43,22 @@
 			<string>2045D86BC5D391C299DCC498309E722E037BFF4E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>OAuth2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A65BCAA9B7A77500BBF95593800C3F1B9D215F5E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OAuthSwift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EDA62BEF657F0C289AEFE3A794591BCBE21B6679</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScrollForSushi</string>
 		</dict>
 	</array>
 </dict>

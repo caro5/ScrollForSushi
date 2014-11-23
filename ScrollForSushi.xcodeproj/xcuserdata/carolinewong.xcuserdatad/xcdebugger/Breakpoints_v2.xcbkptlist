@@ -9,12 +9,86 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OAuth2/OAuth2 Tests/OAuth2CodeGrant_tests.swift"
-            timestampString = "438429435.532944"
+            filePath = "ScrollForSushi/ViewController.swift"
+            timestampString = "438437539.938477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScrollForSushi.ViewController.nameLabel.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "ScrollForSushi"
+                  urlString = "file:///Users/carolinewong/Documents/mini-projects/swiftProjects/ScrollForSushi/ScrollForSushi/ViewController.swift"
+                  timestampString = "438437540.232286"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScrollForSushi.ViewController.nameLabel.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "ScrollForSushi"
+                  urlString = "file:///Users/carolinewong/Documents/mini-projects/swiftProjects/ScrollForSushi/ScrollForSushi/ViewController.swift"
+                  timestampString = "438437540.232481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScrollForSushi.ViewController.init (ScrollForSushi.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; ScrollForSushi.ViewController"
+                  moduleName = "ScrollForSushi"
+                  urlString = "file:///Users/carolinewong/Documents/mini-projects/swiftProjects/ScrollForSushi/ScrollForSushi/ViewController.swift"
+                  timestampString = "438437540.232714"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScrollForSushi.ViewController.init (ScrollForSushi.ViewController.Type)() -&gt; ScrollForSushi.ViewController"
+                  moduleName = "ScrollForSushi"
+                  urlString = "file:///Users/carolinewong/Documents/mini-projects/swiftProjects/ScrollForSushi/ScrollForSushi/ViewController.swift"
+                  timestampString = "438437540.232935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScrollForSushi.ViewController.init (ScrollForSushi.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; ScrollForSushi.ViewController"
+                  moduleName = "ScrollForSushi"
+                  urlString = "file:///Users/carolinewong/Documents/mini-projects/swiftProjects/ScrollForSushi/ScrollForSushi/ViewController.swift"
+                  timestampString = "438437540.233158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

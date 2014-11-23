@@ -7,19 +7,20 @@
 //
 
 import UIKit
-
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 //https://api.delivery.com/merchant/search/delivery?client_id=YjYyNTM1NDAxMmU2M2YzNzYyY2UwOWU2NGM2ZDdkNzZk&address=199%20Water%20St%2010038
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let clientId = "YjYyNTM1NDAxMmU2M2YzNzYyY2UwOWU2NGM2ZDdkNzZk"
+        let addr = "599%20Fairchild%20Dr%2094043"
       
-        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=199%20Water%20St%2010038"
+        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=\(addr)"
         
         var url: NSURL = NSURL(string: url2)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
@@ -30,9 +31,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: response, error:nil)!
         var err: NSError
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        println("Synchronous\(jsonResult)")
+       println("Synchronous\(jsonResult)")
+//        var dataArray = jsonResult["data"] as NSArray
+//        println("Data items count: \(dataArray.count)")
+//        
+//        for item in dataArray { // loop through data items
+//            let obj = item as NSDictionary
+//            for (key, value) in obj {
+//                if key as NSString == "cuisines" && value as NSString == "Japanese" {
+//                    println("Property: \"\(key as String)\"")
+//                }
+//            }
+//        }
         
-        
+
         // Override point for customization after application launch.
         return true
     }

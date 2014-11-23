@@ -9,11 +9,16 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet var theResults: UILabel!
     @IBOutlet var welcomeLabel: UILabel!
-  
     override func viewDidLoad() {
         super.viewDidLoad()
+        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         
+        welcomeLabel.text = defaults.objectForKey("firstName") as? String
+        
+        var results = defaults.objectForKey("order") as Array<Int>
+        theResults.text = "\(results)"
     }
     
     override func didReceiveMemoryWarning() {
