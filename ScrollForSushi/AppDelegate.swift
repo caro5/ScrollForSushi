@@ -17,10 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //https://api.delivery.com/merchant/search/delivery?client_id=YjYyNTM1NDAxMmU2M2YzNzYyY2UwOWU2NGM2ZDdkNzZk&address=199%20Water%20St%2010038
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let clientId = "YjYyNTM1NDAxMmU2M2YzNzYyY2UwOWU2NGM2ZDdkNzZk"
-        let addr = "599%20Fairchild%20Dr%2094043"
+        let clientId = "ODc2OTBhN2JkYzYzZmYzNzQyZDEwNmU3ZTY5YzdmNDIz"
+        let addr = "940%20Market%20St%2094102"
       
-        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=\(addr)"
+        var url2 = "https://api.delivery.com/merchant/search/delivery?client_id=\(clientId)&address=\(addr)&merchants=r"
+        
         
         var url: NSURL = NSURL(string: url2)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
@@ -31,18 +32,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: response, error:nil)!
         var err: NSError
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-       println("Synchronous\(jsonResult)")
-//        var dataArray = jsonResult["data"] as NSArray
-//        println("Data items count: \(dataArray.count)")
-//        
-//        for item in dataArray { // loop through data items
-//            let obj = item as NSDictionary
-//            for (key, value) in obj {
-//                if key as NSString == "cuisines" && value as NSString == "Japanese" {
-//                    println("Property: \"\(key as String)\"")
-//                }
-//            }
-//        }
+        println("Synchronous\(jsonResult)")
+        println("Data items count: \(jsonResult.count)")
+        var info : NSArray =  jsonResult.valueForKey("merchants") as NSArray
+        println("Data items count: \(info.count)")
+        for var i = 0; i < info.count; i++ {
+            if let item: AnyObject! = info[i] as AnyObject! {
+                if (item["summary"] != nil) {
+                    if let summ: AnyObject! = item["summary"] as AnyObject! {
+                        if let cuis: AnyObject! = summ["cuisines"] as AnyObject! {
+                            println(cuis[0])
+                            if (cuis[0] != nil && cuis[0] as NSString == "Japanese") {
+                                println("trueee")
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
 
         // Override point for customization after application launch.
